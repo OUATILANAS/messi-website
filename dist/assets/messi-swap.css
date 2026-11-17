@@ -1,0 +1,356 @@
+.nav-brand svg { display: block; width: min(9.5vw, 9rem); min-width: 6rem; height: auto; }
+.messi-emblem { display: block; width: 100%; height: 100%; object-fit: contain; }
+.transition-rive { opacity: 0; }
+.transition-w::after {
+  content: ''; position: absolute; top: 50%; left: 50%; width: 4rem; height: 4rem;
+  transform: translate(-50%, -50%); background: url('/assets/messi-mark.svg') center / contain no-repeat;
+  pointer-events: none;
+}
+.c.home-hero > .gl-canvas {
+  position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden;
+  background: radial-gradient(ellipse at 50% 36%, #d8e9f6, #f7f9fb 72%);
+}
+.messi-portrait-switch {
+  position: absolute; left: 50%; top: max(4.5rem, 8svh); transform: translateX(-50%);
+  width: min(75vw, 102svh); aspect-ratio: 1200 / 1340;
+  padding: 0; border: 0; background: transparent; cursor: pointer; pointer-events: auto;
+}
+.messi-portrait-switch img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; pointer-events: none; }
+.helmet-grid-item-img-helmet,.helmet-grid-item-reveal-img,.is-social-card,.is-horizontal-scroll,.f1-highlight-img-item {
+  object-position: center top;
+}
+.helmet-grid-item-img-helmet,.helmet-grid-item-reveal-img { object-fit: contain; }
+.video-stream .is-social-card { opacity: 1; }
+@media (max-width: 767px) {
+  .messi-portrait-switch { top: max(6rem, 15svh); width: min(127vw, 76svh); }
+}
+.nav[data-nav-theme="dark"] .nav-brand svg text { fill: #142941; }
+.nav[data-nav-theme="light"] .nav-brand svg text { fill: #142941; }
+
+.messi-footer {
+  padding: clamp(.85rem, 1.8vw, 1.8rem);
+  color: #142747;
+  background: #a6dcf7;
+}
+.messi-footer-panel {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 2.2fr) 1fr;
+  grid-template-rows: auto 1fr;
+  min-height: min(74svh, 50rem);
+  padding: clamp(1.6rem, 5vw, 5rem);
+  color: #f4f8fd;
+  background: radial-gradient(ellipse at 50% 85%, #5b224a, transparent 65%), #142747;
+  border-radius: clamp(.85rem, 2.4vw, 2rem);
+}
+.messi-footer-intro { grid-column: 1 / -1; text-align: center; z-index: 1; }
+.messi-footer-intro p, .messi-footer nav p {
+  margin: 0 0 .8rem;
+  color: #a6dcf7;
+  font-size: clamp(.69rem, 1vw, .95rem);
+  font-weight: 750;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.messi-footer-intro h2 { margin: 0; font-size: clamp(2.75rem, 8vw, 8rem); line-height: .95; font-weight: 850; letter-spacing: -.065em; }
+.messi-footer-intro em { font-family: Brier, Georgia, serif; font-style: normal; font-weight: 400; }
+.messi-footer-portrait {
+  position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
+  width: auto; max-width: 52%; height: 67%; object-fit: contain; object-position: center bottom;
+}
+.messi-footer nav { position: relative; z-index: 1; align-self: center; display: grid; gap: .35rem; }
+.messi-footer-pages { grid-column: 1; }
+.messi-footer-social { grid-column: 3; justify-self: end; }
+.messi-footer nav a { width: fit-content; font-size: clamp(.85rem, 1.65vw, 1.55rem); font-weight: 780; text-decoration: none; }
+.messi-footer nav a:hover { color: #a6dcf7; text-decoration: underline; }
+.messi-footer-bottom { display: flex; justify-content: space-between; gap: .8rem; padding: .8rem .3rem 0; font-weight: 700; font-size: .8rem; }
+.nav[data-nav-theme="light"] .nav-brand svg text { fill: #142747; }
+@media (max-width: 767px) {
+  .messi-footer-panel { min-height: 0; grid-template-columns: 1fr 1fr; gap: 1.6rem 1rem; }
+  .messi-footer-portrait { position: relative; left: auto; transform: none; grid-column: 1 / -1; grid-row: 2; margin: 0 auto; width: min(68%, 16rem); max-width: none; height: auto; }
+  .messi-footer-social { grid-column: 2; }
+}
+
+
+.messi-pitch { color: #142747; background: #f4f8fd; }
+.messi-pitch .messi-feature,
+.messi-pitch .messi-chapter {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  align-items: center;
+  gap: clamp(1.5rem, 5vw, 6rem);
+  padding: clamp(2rem, 7vw, 7rem) 6vw;
+}
+.messi-pitch .messi-feature {
+  min-height: 75svh;
+  padding-top: max(7rem, 12vh);
+  background: radial-gradient(ellipse at 70% 55%, #a6dcf7, #eff5fc 70%);
+}
+.messi-pitch .messi-feature h1,
+.messi-pitch .messi-chapter h2 {
+  margin: 0 0 .35em;
+  font-weight: 850;
+  line-height: .95;
+  letter-spacing: -.065em;
+}
+.messi-pitch .messi-feature h1 { font-size: clamp(3.6rem, 10vw, 11rem); }
+.messi-pitch .messi-feature i { font: inherit; font-family: Brier, Georgia, serif; }
+.messi-pitch .messi-chapter h2 { font-size: clamp(2.2rem, 5vw, 5.5rem); }
+.messi-pitch .messi-chapter:nth-of-type(even) { background: #e2edf8; }
+.messi-pitch .messi-chapter:not(:has(img)) { grid-template-columns: 1fr; }
+.messi-pitch .messi-chapter { scroll-margin-top: 6rem; }
+.messi-pitch .messi-feature img,
+.messi-pitch .messi-chapter img { width: 100%; height: min(55svh, 30rem); object-fit: contain; object-position: center; }
+.messi-pitch .messi-feature p,
+.messi-pitch .messi-chapter p { max-width: 42rem; font-size: clamp(1rem, 1.6vw, 1.4rem); margin-bottom: 1rem; }
+.messi-pitch .messi-chapter-label { text-transform: uppercase; color: #81294d; font-weight: 850; letter-spacing: .09em; }
+.messi-pitch .messi-chapter-label:empty { display: none; }
+.messi-pitch .messi-link-row { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1.3rem; }
+.messi-pitch .messi-link-row a { display: inline-block; padding: .65rem .9rem; border-radius: .4rem; background: #142747; color: #f4f8fd; font-weight: 750; }
+.messi-pitch .messi-link-row a:hover { background: #81294d; }
+.messi-pitch .messi-stats { display: grid; grid-template-columns: repeat(4,1fr); gap: 1rem; padding: 4vw 6vw; color: #f4f8fd; background: #142747; }
+.messi-pitch .messi-stats strong { display: block; color: #a6dcf7; font-size: clamp(2.5rem, 7vw, 7rem); line-height: 1; }
+.messi-pitch details { padding: .8rem 0; border-top: 1px solid #a1b7d0; }
+.messi-pitch summary { cursor: pointer; font-weight: 750; }
+@media (max-width: 650px) {
+  .messi-pitch .messi-feature, .messi-pitch .messi-chapter { grid-template-columns: 1fr; }
+  .messi-pitch .messi-stats { grid-template-columns: repeat(2,1fr); }
+  .messi-pitch .messi-feature img { height: min(43svh, 24rem); }
+}
+
+.messi-pitch .off-t-hero-img {
+  background-size: contain;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+.messi-pitch .messi-project-journal {
+  padding: clamp(2rem, 5vw, 5rem) 0;
+  background: #142747;
+  color: #f4f8fd;
+}
+.messi-project-journal .horizontal-pin-spacer,
+.messi-project-journal .horizontal-pin-sticky { height: auto !important; position: static; }
+.messi-project-journal .horizontal-track {
+  display: flex;
+  width: 100%;
+  gap: clamp(1rem, 3vw, 3rem);
+  padding: 0 6vw 1.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  transform: none !important;
+}
+.messi-project-card {
+  flex: 0 0 clamp(16rem, 38vw, 35rem);
+  overflow: hidden;
+  scroll-snap-align: center;
+  border: 1px solid #617b9d;
+  border-radius: .6rem;
+  background: #233958;
+}
+.messi-project-card:nth-child(even) { margin-top: clamp(1rem, 5vw, 5rem); }
+.messi-project-card img { width: 100%; height: clamp(12rem, 27vw, 24rem); object-fit: contain; }
+.messi-project-card div { padding: 1.25rem; }
+.messi-project-card h2 { font-size: clamp(1.5rem, 3vw, 3rem); }
+.messi-pitch-opening { position: relative; min-height: 85svh; overflow: hidden; }
+.messi-pitch-cover {
+  position: absolute; inset: 0; z-index: 6;
+  display: grid; grid-template-columns: 1.1fr .9fr; align-items: end;
+  gap: 1.5rem; padding: 7rem 6vw 0; color: #142747;
+  background: radial-gradient(ellipse at 70% 70%, #a6dcf7, #eff5fc 70%);
+}
+.off-track .messi-pitch-cover { background: radial-gradient(ellipse at 70% 75%, #edd3df, #f4f8fd 72%); }
+.messi-pitch-cover > div { align-self: center; }
+.messi-pitch-cover h1 { margin: .12em 0; font-size: clamp(3.4rem, 10vw, 12rem); line-height: .88; letter-spacing: -.075em; font-weight: 850; }
+.messi-pitch-cover p { font-size: clamp(.9rem, 1.5vw, 1.3rem); font-weight: 750; }
+.messi-pitch-cover img { width: 100%; height: min(65svh, 45rem); object-fit: contain; object-position: center bottom; }
+@media (max-width: 650px) {
+  .messi-pitch-cover { grid-template-columns: 1fr; grid-template-rows: auto 1fr; padding-top: 6rem; }
+  .messi-pitch-cover img { height: min(49svh, 28rem); align-self: end; }
+}
+
+.messi-award-card {
+  position: absolute;
+  z-index: 4;
+  bottom: clamp(1rem, 3vw, 3rem);
+  left: clamp(1rem, 3vw, 3rem);
+  display: grid;
+  gap: .28rem;
+  padding: .75rem 1rem;
+  border: 1px solid #7896b3;
+  border-radius: .55rem;
+  background: #f4f8fdf2;
+  color: #142747;
+  text-decoration: none;
+}
+.messi-award-card strong { font-size: clamp(2rem, 4vw, 4rem); line-height: 1; }
+.messi-award-card span { font-weight: 800; }
+.messi-award-card small { font-size: .75rem; }
+.messi-award-card:hover small { text-decoration: underline; }
+.c.home-hero > .gl-canvas { z-index: 2; }
+.s.home-hero { position: relative; z-index: 3; }
+.home-marquee .marquee-gl-rive-w { pointer-events: none; }
+.home-hero .home-marquee,
+.home-hero .home-marquee * { pointer-events: none; }
+
+.c.home-hero > .gl-canvas::before,
+.c.home-hero > .gl-canvas::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: url('/assets/635132d85ea5.svg') center / cover no-repeat;
+  opacity: .21;
+}
+.c.home-hero > .gl-canvas::after {
+  background-color: #b0c7df;
+  background-blend-mode: luminosity;
+  transform: translate(var(--contour-x, 0px), var(--contour-y, 0px)) scale(1.07);
+  mask-image: radial-gradient(ellipse 22rem 17rem at var(--cursor-x, 50%) var(--cursor-y, 50%), #000, transparent 95%);
+  opacity: 0;
+  transition: opacity .4s ease;
+}
+.c.home-hero > .gl-canvas[data-tracking="true"]::after { opacity: .55; }
+.messi-portrait-switch { z-index: 1; }
+.messi-live-helmet {
+  position: absolute;
+  left: 50%;
+  top: -4%;
+  width: 49%;
+  height: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+.messi-live-helmet canvas { display: block; width: 100%; height: 100%; }
+.messi-award-card { text-align: left; cursor: pointer; }
+.messi-award-card[aria-pressed="true"] { background: #142747; color: #f4f8fd; }
+@media (max-width: 767px) {
+  .messi-award-card { padding: .5rem .7rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .c.home-hero > .gl-canvas::after { transition: none; }
+}
+
+.messi-portrait-switch:has(.messi-current[src$="messi-barca-hero.webp"]) .messi-live-helmet {
+  top: -4%;
+  width: 55%;
+  height: 57%;
+}
+
+@property --portrait-wipe {
+  syntax: "<percentage>";
+  initial-value: 0%;
+  inherits: true;
+}
+
+.messi-portrait-switch {
+  --portrait-wipe: 0%;
+  transition: --portrait-wipe .7s cubic-bezier(.65, 0, .35, 1);
+}
+.messi-portrait-switch[data-reveal="true"] { --portrait-wipe: 100%; }
+.messi-portrait-switch .messi-current {
+  clip-path: inset(0 0 0 var(--portrait-wipe));
+}
+.messi-portrait-switch .messi-portrait-alt {
+  clip-path: inset(0 calc(100% - var(--portrait-wipe)) 0 0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .messi-portrait-switch { transition: none; }
+}
+
+/* Cut the same opening in both layers so the two faces never stack. */
+.messi-portrait-switch[data-hover="true"]:not([data-reveal="true"]) {
+  --portrait-window: radial-gradient(ellipse 28% 22% at var(--portrait-x, 50%) var(--portrait-y, 25%),
+    #000 0 92%, transparent 100%);
+}
+.messi-portrait-switch[data-hover="true"]:not([data-reveal="true"]) img { clip-path: none; }
+.messi-portrait-switch[data-hover="true"]:not([data-reveal="true"]) .messi-portrait-alt {
+  mask-image: var(--portrait-window);
+}
+.messi-portrait-switch[data-hover="true"]:not([data-reveal="true"]) .messi-current {
+  mask-image: linear-gradient(#000, #000), var(--portrait-window);
+  mask-composite: subtract;
+}
+
+/* Keep the face in frame as the center portrait rises into view. */
+.image.is-otot-home-end {
+  top: 12svh;
+  width: auto;
+  height: min(96svh, 100vw);
+  object-fit: contain;
+  transform-origin: center top;
+}
+
+@media (max-width: 767px) {
+  .image.is-otot-home-end {
+    top: 8svh;
+    height: min(74svh, 125vw);
+    max-width: 100%;
+  }
+}
+
+/* Legacy Rive artwork has its own baked-in lime palette. */
+canvas[data-rive-file="phrases"],
+canvas[data-rive-file="circuits"],
+canvas[data-rive-mob-landscape] {
+  visibility: hidden;
+}
+
+/* Keep each homepage story and its image together at every viewport size. */
+.messi-home-feature {
+  padding: clamp(3.5rem, 7vw, 7rem) clamp(1.25rem, 6vw, 7rem);
+  scroll-margin-top: 6rem;
+  color: #142747;
+  background: #e7f1fb;
+}
+.messi-home-feature.beyond-football { background: #f4f8fd; }
+.messi-home-feature-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 4fr) minmax(0, 5fr);
+  gap: clamp(2rem, 6vw, 7rem);
+  align-items: center;
+  max-width: 100rem;
+  margin-inline: auto;
+}
+.beyond-football .messi-home-feature-inner {
+  grid-template-columns: minmax(0, 5fr) minmax(0, 4fr);
+}
+.beyond-football .messi-home-feature-copy { grid-area: 1 / 2; }
+.beyond-football .messi-home-feature-media { grid-area: 1 / 1; }
+.messi-home-feature h2 {
+  margin: 0 0 .28em;
+  font-family: Mona Sans Variable, Arial, sans-serif;
+  font-size: clamp(2.5rem, 5vw, 6rem);
+  font-weight: 800;
+  line-height: .96;
+  letter-spacing: -.045em;
+  text-transform: uppercase;
+}
+.messi-home-feature h2 em {
+  display: block;
+  font-family: Brier, Georgia, serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.beyond-football h2 em { color: #9d284a; }
+.messi-home-feature p { max-width: 32rem; margin: 0 0 1.5rem; }
+.messi-home-feature .btn-w { width: fit-content; max-width: 100%; }
+.messi-home-feature-media { margin: 0; min-width: 0; }
+.messi-home-feature-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: .8rem;
+}
+.messi-home-feature-media figcaption {
+  margin-top: .65rem;
+  color: #526884;
+  font-size: .85rem;
+}
+@media (max-width: 767px) {
+  .messi-home-feature-inner,
+  .beyond-football .messi-home-feature-inner { grid-template-columns: minmax(0, 1fr); }
+  .beyond-football .messi-home-feature-copy,
+  .beyond-football .messi-home-feature-media { grid-area: auto; }
+}
